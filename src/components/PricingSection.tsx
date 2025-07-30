@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/accordion';
 import { Check, Info, Shield, Zap, Clock, Users } from 'lucide-react';
 import { useI18n } from '@/hooks/useI18n';
+import { Switch } from '@/components/ui/switch';
 
 const PricingSection = () => {
   const { t } = useI18n();
@@ -20,6 +21,7 @@ const PricingSection = () => {
     telefone: '',
     tipoEmbarcacao: ''
   });
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('annual');
 
   const benefits = [
     "Monitoramento 24/7",
@@ -91,25 +93,28 @@ const PricingSection = () => {
                   <span className="text-primary font-semibold">Plano Completo</span>
                 </div>
                 
+                <div className="flex items-center justify-center space-x-4 mb-6">
+                  <Label htmlFor="billing-cycle" className={billingCycle === 'annual' ? 'text-primary' : 'text-muted-foreground'}>
+                    Anual
+                  </Label>
+                  <Switch
+                    id="billing-cycle"
+                    checked={billingCycle === 'monthly'}
+                    onCheckedChange={(checked) => setBillingCycle(checked ? 'monthly' : 'annual')}
+                  />
+                  <Label htmlFor="billing-cycle" className={billingCycle === 'monthly' ? 'text-primary' : 'text-muted-foreground'}>
+                    Mensal
+                  </Label>
+                </div>
+
                 <div className="space-y-2">
                   <div className="text-6xl md:text-7xl font-bold text-primary">
-                    R$ 189
-                    <span className="text-2xl text-muted-foreground">/mês</span>
+                    {billingCycle === 'annual' ? 'R$ 2.500' : 'R$ 250'}
+                    <span className="text-2xl text-muted-foreground">{billingCycle === 'annual' ? '/ano' : '/mês'}</span>
                   </div>
-                  <p className="text-muted-foreground">por embarcação</p>
-                </div>
-              </div>
-
-              <div className="flex items-center justify-center space-x-2 mb-8">
-                <span className="text-lg text-muted-foreground">+</span>
-                <span className="text-2xl font-bold text-foreground">R$ 1.100</span>
-                <span className="text-muted-foreground">taxa de implementação</span>
-                <div className="group relative">
-                  <Info className="w-4 h-4 text-muted-foreground cursor-help ml-1" />
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-card border border-border rounded-lg p-3 text-sm text-muted-foreground w-64 z-10">
-                    Este valor único cobre o custo de fabricação e a instalação do hardware, 
-                    que é fornecido em regime de comodato com vida útil estimada de 10 anos.
-                  </div>
+                  <p className="text-muted-foreground">
+                    {billingCycle === 'monthly' ? 'ou 12x de R$ 250' : 'Pagamento único anual'}
+                  </p>
                 </div>
               </div>
 

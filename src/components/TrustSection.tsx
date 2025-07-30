@@ -1,21 +1,22 @@
 import { Star, Users, Award } from 'lucide-react';
 import { useI18n } from '@/hooks/useI18n';
+import teamVideo from '@/assets/team.webm';
 
 const TrustSection = () => {
   const { t } = useI18n();
   const testimonials = [
     {
-      quote: "O SAFEBOAT me deu a tranquilidade que eu precisava. Detectou um problema na bomba de combustível antes mesmo que eu percebesse.",
+      quote: t('trust.testimonial1'),
       name: "Carlos M.",
       boat: "Intermarine 600"
     },
     {
-      quote: "Desde que instalei o sistema, nunca mais tive surpresas desagradáveis. Vale cada centavo investido.",
+      quote: t('trust.testimonial2'),
       name: "Roberto S.",
       boat: "Azimut 54"
     },
     {
-      quote: "A tecnologia é impressionante. Recebo alertas antes mesmo dos problemas acontecerem.",
+      quote: t('trust.testimonial3'),
       name: "Marina L.",
       boat: "Princess 45"
     }
@@ -30,11 +31,11 @@ const TrustSection = () => {
         {/* Testimonials */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 heading">
-            Elogiada por{' '}
-            <span className="text-primary">Usuários Reais</span>
+            {t('trust.title')}{' '}
+            <span className="text-primary">{t('trust.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Proprietários de embarcações de médio e alto padrão confiam no SAFEBOAT para proteger seus investimentos.
+            {t('trust.subtitle')}
           </p>
         </div>
 
@@ -73,8 +74,8 @@ const TrustSection = () => {
         <div className="premium-card bg-gradient-to-r from-card to-muted/5 border-primary/20">
           <div className="text-center mb-8">
             <h3 className="text-3xl md:text-4xl font-bold mb-4 heading">
-              Tecnologia Confiável para as{' '}
-              <span className="text-primary">Maiores Frotas</span>
+              {t('trust.b2bTitle')}{' '}
+              <span className="text-primary">{t('trust.b2bTitleHighlight')}</span>
             </h3>
           </div>
 
@@ -90,23 +91,21 @@ const TrustSection = () => {
               </div>
 
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                A <strong className="text-foreground">Prime Share</strong>, empresa de gestão de embarcações com uma frota de cerca de{' '}
-                <span className="text-primary font-bold">200 barcos</span>, confia na tecnologia SAFEBOAT para otimizar a manutenção, 
-                aumentar a segurança e garantir a disponibilidade de seus ativos.
+                A <strong className="text-foreground">Prime Share</strong>, {t('trust.b2bDescription')}
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Award className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">Redução de 40% nos custos de manutenção</span>
+                  <span className="text-muted-foreground">{t('trust.b2bFeature1')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Award className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">95% de disponibilidade da frota</span>
+                  <span className="text-muted-foreground">{t('trust.b2bFeature2')}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Award className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">Monitoramento 24/7 de 200+ embarcações</span>
+                  <span className="text-muted-foreground">{t('trust.b2bFeature3')}</span>
                 </div>
               </div>
             </div>
@@ -114,14 +113,13 @@ const TrustSection = () => {
             <div className="text-center lg:text-right">
               <div className="inline-flex flex-col items-center space-y-6">
                 <div className="text-6xl font-bold text-primary">200+</div>
-                <p className="text-xl text-muted-foreground">Embarcações Monitoradas</p>
+                <p className="text-xl text-muted-foreground">{t('trust.b2bStats')}</p>
                 
                 <div className="w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
                 
                 <div className="space-y-4">
                   <p className="text-sm text-muted-foreground">
-                    "Se uma tecnologia é confiável o suficiente para gerenciar 200 embarcações comerciais, 
-                    imagine o que pode fazer pela sua."
+                    "{t('trust.b2bQuote')}"
                   </p>
                 </div>
               </div>
@@ -130,41 +128,53 @@ const TrustSection = () => {
 
           <div className="text-center mt-12">
             <button className="btn-ghost">
-              Conheça nossas Soluções para Frotas
+              {t('trust.fleetSolutions')}
             </button>
           </div>
         </div>
 
         {/* Expertise */}
-        <div className="mt-20 text-center">
-          <h3 className="text-3xl md:text-4xl font-bold mb-12 heading">
-            Desenvolvido por{' '}
-            <span className="text-primary">Especialistas</span>
-          </h3>
+        <div className="mt-20 text-center relative rounded-2xl overflow-hidden">
+          <video
+            className="absolute top-0 left-0 w-full h-full object-cover z-0"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src={teamVideo} type="video/webm" />
+          </video>
+          <div className="absolute inset-0 bg-background opacity-80 z-10"></div>
+          <div className="relative z-20 p-12">
+            <h3 className="text-3xl md:text-4xl font-bold mb-12 heading">
+              {t('trust.expertiseTitle')}{' '}
+              <span className="text-primary">{t('trust.expertiseTitleHighlight')}</span>
+            </h3>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="premium-card text-center group hover:border-primary/50 transition-all duration-500">
-              <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                <span className="text-primary font-bold text-xl">EN</span>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="premium-card text-center group hover:border-primary/50 transition-all duration-500 bg-card/20 backdrop-blur-sm">
+                <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                  <span className="text-primary font-bold text-xl">EN</span>
+                </div>
+                <h4 className="text-xl font-bold mb-2 text-foreground">{t('trust.naval')}</h4>
+                <p className="text-muted-foreground">{t('trust.navalDesc')}</p>
               </div>
-              <h4 className="text-xl font-bold mb-2 text-foreground">Engenheiros Navais</h4>
-              <p className="text-muted-foreground">Especialistas em sistemas marítimos e segurança náutica</p>
-            </div>
 
-            <div className="premium-card text-center group hover:border-primary/50 transition-all duration-500">
-              <div className="w-16 h-16 mx-auto mb-6 bg-secondary/10 rounded-full flex items-center justify-center group-hover:bg-secondary/20 transition-colors duration-300">
-                <span className="text-secondary font-bold text-xl">EE</span>
+              <div className="premium-card text-center group hover:border-primary/50 transition-all duration-500 bg-card/20 backdrop-blur-sm">
+                <div className="w-16 h-16 mx-auto mb-6 bg-secondary/10 rounded-full flex items-center justify-center group-hover:bg-secondary/20 transition-colors duration-300">
+                  <span className="text-secondary font-bold text-xl">EE</span>
+                </div>
+                <h4 className="text-xl font-bold mb-2 text-foreground">{t('trust.electrical')}</h4>
+                <p className="text-muted-foreground">{t('trust.electricalDesc')}</p>
               </div>
-              <h4 className="text-xl font-bold mb-2 text-foreground">Engenheiros Eletricistas</h4>
-              <p className="text-muted-foreground">Expertise em sistemas elétricos e automação embarcada</p>
-            </div>
 
-            <div className="premium-card text-center group hover:border-primary/50 transition-all duration-500">
-              <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                <span className="text-primary font-bold text-xl">EL</span>
+              <div className="premium-card text-center group hover:border-primary/50 transition-all duration-500 bg-card/20 backdrop-blur-sm">
+                <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                  <span className="text-primary font-bold text-xl">EL</span>
+                </div>
+                <h4 className="text-xl font-bold mb-2 text-foreground">{t('trust.electronic')}</h4>
+                <p className="text-muted-foreground">{t('trust.electronicDesc')}</p>
               </div>
-              <h4 className="text-xl font-bold mb-2 text-foreground">Engenheiros Eletrônicos</h4>
-              <p className="text-muted-foreground">Desenvolvimento de hardware e sistemas de comunicação</p>
             </div>
           </div>
         </div>

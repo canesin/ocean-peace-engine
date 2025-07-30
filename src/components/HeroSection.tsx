@@ -1,9 +1,13 @@
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { useI18n } from '@/hooks/useI18n';
 import heroYacht from '@/assets/hero-yacht.jpg';
+import heroVideo from '@/assets/yacht-cruising.webm';
 
 const HeroSection = () => {
   const { t } = useI18n();
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -11,7 +15,16 @@ const HeroSection = () => {
         <img 
           src={heroYacht} 
           alt="Luxury yacht sailing on open ocean" 
-          className="w-full h-full object-cover"
+          className={`w-full h-full object-cover transition-opacity duration-1000 ${videoLoaded ? 'opacity-0' : 'opacity-100'}`}
+        />
+        <video
+          src={heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
+          onCanPlay={() => setVideoLoaded(true)}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background/80" />
         <div className="absolute inset-0 bg-[var(--gradient-ocean)]" />

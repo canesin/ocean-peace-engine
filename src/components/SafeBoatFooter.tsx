@@ -1,8 +1,19 @@
 import { MapPin, Mail, Phone, Linkedin, Instagram } from 'lucide-react';
 import { useI18n } from '@/hooks/useI18n';
+import galleryImg1 from '@/assets/IMG_20250724_122735270_HDR.jpg';
+import galleryImg2 from '@/assets/IMG_20250724_122945059_HDR.jpg';
+import galleryImg3 from '@/assets/IMG_20250724_123017972_HDR.jpg';
+import galleryImg4 from '@/assets/IMG_20250724_123035394_HDR.jpg';
 
 const SafeBoatFooter = () => {
   const { t } = useI18n();
+  const images = [
+    galleryImg1,
+    galleryImg2,
+    galleryImg3,
+    galleryImg4,
+  ];
+
   return (
     <footer className="bg-background border-t border-border/50 py-16 relative overflow-hidden">
       {/* Background Effects */}
@@ -13,10 +24,7 @@ const SafeBoatFooter = () => {
           {/* Brand Identity */}
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-lg">SB</span>
-              </div>
-              <span className="text-xl font-bold text-foreground">SAFEBOAT</span>
+              <img src="/logo.png" alt="SAFEBOAT Logo" className="h-10 w-auto" />
             </div>
             
             <p className="text-muted-foreground leading-relaxed">
@@ -115,6 +123,19 @@ const SafeBoatFooter = () => {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Gallery */}
+        <div className="mt-16">
+          <h4 className="text-lg font-bold text-foreground mb-6 text-center">Nossos Bastidores</h4>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {images.map((image, index) => (
+              <div key={index} className="w-full h-32 rounded-lg overflow-hidden group relative">
+                <img src={image} alt={`Gallery image ${index + 1}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300"></div>
+              </div>
+            ))}
           </div>
         </div>
 

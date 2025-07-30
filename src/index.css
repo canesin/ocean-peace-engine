@@ -144,7 +144,7 @@ All colors MUST be HSL.
 @layer components {
   /* Premium Button Variants */
   .btn-hero {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-xl font-bold text-lg tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-[var(--shadow-glow)] animate-pulse;
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-xl font-bold text-lg tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-[var(--shadow-glow)] animate-glow-pulse;
   }
 
   .btn-ghost {
@@ -193,8 +193,8 @@ All colors MUST be HSL.
   }
 
   @keyframes glow-pulse {
-    0%, 100% { box-shadow: 0 0 20px hsl(var(--bright-cyan) / 0.3); }
-    50% { box-shadow: 0 0 40px hsl(var(--bright-cyan) / 0.6); }
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--bright-cyan) / 0.2); }
+    50% { box-shadow: 0 0 30px hsl(var(--bright-cyan) / 0.4); }
   }
 
   @keyframes tech-scan {

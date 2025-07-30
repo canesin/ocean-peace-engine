@@ -20,8 +20,8 @@ const translations = {
     'header.getStarted': 'Começar Agora',
     
     // Hero Section
-    'hero.title': 'Sua Embarcação Mais',
-    'hero.titleHighlight': 'Inteligente e Segura',
+    'hero.title': 'No mar, não há',
+    'hero.titleHighlight': 'acostamento',
     'hero.subtitle': 'Proteja seu investimento com tecnologia preditiva que prevê falhas antes que se tornem desastres. Navegue com tranquilidade sabendo que sua embarcação está sempre sob controle.',
     'hero.getQuote': 'Solicitar Orçamento',
     'hero.watchDemo': 'Ver Demonstração',
@@ -151,8 +151,8 @@ const translations = {
     'header.getStarted': 'Get Started',
     
     // Hero Section
-    'hero.title': 'Your Vessel More',
-    'hero.titleHighlight': 'Intelligent and Safe',
+    'hero.title': 'The sea has no',
+    'hero.titleHighlight': 'emergency lane',
     'hero.subtitle': 'Protect your investment with predictive technology that forecasts failures before they become disasters. Navigate with peace of mind knowing your vessel is always under control.',
     'hero.getQuote': 'Get Quote',
     'hero.watchDemo': 'Watch Demo',
@@ -282,8 +282,8 @@ const translations = {
     'header.getStarted': 'Comenzar',
     
     // Hero Section
-    'hero.title': 'Su Embarcación Más',
-    'hero.titleHighlight': 'Inteligente y Segura',
+    'hero.title': 'El mar no tiene',
+    'hero.titleHighlight': 'carril de emergencia',
     'hero.subtitle': 'Proteja su inversión con tecnología predictiva que prevé fallas antes de que se conviertan en desastres. Navegue con tranquilidad sabiendo que su embarcación está siempre bajo control.',
     'hero.getQuote': 'Solicitar Cotización',
     'hero.watchDemo': 'Ver Demostración',
@@ -414,7 +414,11 @@ export const I18nProvider = ({ children }: I18nProviderProps) => {
   const [language, setLanguage] = useState<Language>('pt');
 
   const t = (key: string): string => {
-    return translations[language][key as keyof typeof translations[Language]] || key;
+    const langTranslations = translations[language];
+    if (key in langTranslations) {
+      return langTranslations[key as keyof typeof langTranslations];
+    }
+    return key;
   };
 
   return (
