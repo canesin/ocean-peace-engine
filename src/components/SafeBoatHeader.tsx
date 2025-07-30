@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { useI18n } from '@/hooks/useI18n';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const SafeBoatHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t } = useI18n();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,26 +37,27 @@ const SafeBoatHeader = () => {
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#solucao" className="text-muted-foreground hover:text-primary transition-colors story-link">
-              A Solução
+              {t('header.solution')}
             </a>
             <a href="#como-funciona" className="text-muted-foreground hover:text-primary transition-colors story-link">
-              Como Funciona
+              {t('header.howItWorks')}
             </a>
             <a href="#precos" className="text-muted-foreground hover:text-primary transition-colors story-link">
-              Preços
+              {t('header.pricing')}
             </a>
             <a href="#parceiros" className="text-muted-foreground hover:text-primary transition-colors story-link">
-              Parceiros
+              {t('header.partners')}
             </a>
           </nav>
 
           {/* CTAs */}
           <div className="flex items-center space-x-4">
-            <Button variant="outline" className="btn-ghost hidden md:inline-flex">
-              Soluções para Frotas
+            <LanguageSwitcher />
+            <Button variant="outline" className="btn-ghost hidden lg:inline-flex">
+              {t('footer.navigation.fleetSolutions')}
             </Button>
             <Button className="btn-hero">
-              Solicitar Orçamento
+              {t('hero.getQuote')}
             </Button>
           </div>
         </div>

@@ -1,6 +1,8 @@
 import { Star, Users, Award } from 'lucide-react';
+import { useI18n } from '@/hooks/useI18n';
 
 const TrustSection = () => {
+  const { t } = useI18n();
   const testimonials = [
     {
       quote: "O SAFEBOAT me deu a tranquilidade que eu precisava. Detectou um problema na bomba de combustível antes mesmo que eu percebesse.",

@@ -10,8 +10,10 @@ import {
   AccordionTrigger 
 } from '@/components/ui/accordion';
 import { Check, Info, Shield, Zap, Clock, Users } from 'lucide-react';
+import { useI18n } from '@/hooks/useI18n';
 
 const PricingSection = () => {
+  const { t } = useI18n();
   const [formData, setFormData] = useState({
     nome: '',
     email: '',

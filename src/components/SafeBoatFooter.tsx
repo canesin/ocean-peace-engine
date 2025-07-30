@@ -1,6 +1,8 @@
 import { MapPin, Mail, Phone, Linkedin, Instagram } from 'lucide-react';
+import { useI18n } from '@/hooks/useI18n';
 
 const SafeBoatFooter = () => {
+  const { t } = useI18n();
   return (
     <footer className="bg-background border-t border-border/50 py-16 relative overflow-hidden">
       {/* Background Effects */}

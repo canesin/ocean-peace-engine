@@ -1,7 +1,9 @@
 import { Button } from '@/components/ui/button';
+import { useI18n } from '@/hooks/useI18n';
 import heroYacht from '@/assets/hero-yacht.jpg';
 
 const HeroSection = () => {
+  const { t } = useI18n();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -19,15 +21,15 @@ const HeroSection = () => {
       <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 animate-fade-in">
           <span className="block mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            No mar,
+            {t('hero.title')}
           </span>
           <span className="block text-foreground">
-            não há acostamentos.
+            {t('hero.titleHighlight')}
           </span>
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in animation-delay-300">
-          A primeira plataforma de monitoramento preditivo que garante a sua tranquilidade.
+          {t('hero.subtitle')}
         </p>
 
         <div className="animate-fade-in animation-delay-600">
@@ -35,7 +37,7 @@ const HeroSection = () => {
             size="lg" 
             className="btn-hero text-xl px-12 py-6 mb-8"
           >
-            Solicitar Orçamento
+            {t('hero.getQuote')}
           </Button>
           
           <p className="text-sm text-muted-foreground">

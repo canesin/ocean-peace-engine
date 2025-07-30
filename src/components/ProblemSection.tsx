@@ -1,30 +1,33 @@
 import { AlertTriangle, DollarSign, Clock, Settings } from 'lucide-react';
+import { useI18n } from '@/hooks/useI18n';
 
 const ProblemSection = () => {
+  const { t } = useI18n();
+  
   const problems = [
     {
       icon: AlertTriangle,
-      title: "Falhas Imprevisíveis",
-      stat: "Falhas críticas podem custar vidas.",
-      description: "Problemas mecânicos inesperados em alto mar representam riscos extremos para tripulação e passageiros."
+      titleKey: "problems.unpredictableFailures.title",
+      statKey: "problems.unpredictableFailures.stat",
+      descriptionKey: "problems.unpredictableFailures.description"
     },
     {
       icon: DollarSign,
-      title: "Custos Elevados",
-      stat: "Altos custos de manutenção corretiva.",
-      description: "Reparos de emergência custam até 5x mais que manutenção preventiva programada."
+      titleKey: "problems.highCosts.title",
+      statKey: "problems.highCosts.stat",
+      descriptionKey: "problems.highCosts.description"
     },
     {
       icon: Clock,
-      title: "Tempo Perdido",
-      stat: "Alta taxa de indisponibilidade.",
-      description: "Viagens canceladas e tempo de lazer perdido devido a falhas não detectadas antecipadamente."
+      titleKey: "problems.timeLost.title",
+      statKey: "problems.timeLost.stat",
+      descriptionKey: "problems.timeLost.description"
     },
     {
       icon: Settings,
-      title: "Gestão Complexa",
-      stat: "A dor real de gerenciar seu patrimônio.",
-      description: "Controle de múltiplos sistemas, agendamento de manutenções e monitoramento constante geram stress."
+      titleKey: "problems.complexManagement.title",
+      statKey: "problems.complexManagement.stat",
+      descriptionKey: "problems.complexManagement.description"
     }
   ];
 
@@ -36,11 +39,11 @@ const ProblemSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 heading">
-            Sua paixão não deveria ser uma{' '}
-            <span className="text-primary">dor de cabeça</span>
+            {t('problems.title')}{' '}
+            <span className="text-primary">{t('problems.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Proprietários de embarcações enfrentam desafios únicos que podem transformar momentos de lazer em fonte de ansiedade.
+            {t('problems.subtitle')}
           </p>
         </div>
 
@@ -59,15 +62,15 @@ const ProblemSection = () => {
                   </div>
                   
                   <h3 className="text-xl font-bold mb-4 text-foreground">
-                    {problem.title}
+                    {t(problem.titleKey)}
                   </h3>
                   
                   <p className="text-primary font-semibold mb-4 text-lg">
-                    {problem.stat}
+                    {t(problem.statKey)}
                   </p>
                   
                   <p className="text-muted-foreground leading-relaxed">
-                    {problem.description}
+                    {t(problem.descriptionKey)}
                   </p>
                 </div>
               </div>
@@ -79,7 +82,7 @@ const ProblemSection = () => {
           <div className="inline-flex items-center space-x-2 bg-card/50 rounded-full px-6 py-3 border border-border/50">
             <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
             <span className="text-muted-foreground">
-              <span className="text-primary font-semibold">30 milhões</span> de embarcações operam sem inteligência preditiva
+              <span className="text-primary font-semibold">30</span> {t('problems.bottomStat')}
             </span>
           </div>
         </div>

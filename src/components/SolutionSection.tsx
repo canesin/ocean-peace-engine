@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import { Shield, Smartphone, Zap } from 'lucide-react';
+import { useI18n } from '@/hooks/useI18n';
 import hardwareImage from '@/assets/safeboat-hardware.jpg';
 import appMockup from '@/assets/app-mockup.jpg';
 
 const SolutionSection = () => {
   const [activeStep, setActiveStep] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useI18n();
 
   const steps = [
     {
@@ -54,11 +56,11 @@ const SolutionSection = () => {
         {/* Section Header */}
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 heading">
-            Tranquilidade em{' '}
-            <span className="text-primary">Três Passos</span>
+            {t('solution.title')}{' '}
+            <span className="text-primary">{t('solution.titleHighlight')}</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Nossa solução transforma dados em conhecimento, ansiedade em confiança.
+            {t('solution.subtitle')}
           </p>
         </div>
 
