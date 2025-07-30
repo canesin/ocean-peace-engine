@@ -8,35 +8,63 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* SAFEBOAT Brand Colors - Deep Sea & Technology */
+    --background: 210 40% 6%;              /* Deep Navy Blue #0A192F */
+    --foreground: 0 0% 100%;               /* White #FFFFFF */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 30% 12%;                   /* Charcoal #1E2A3A */
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 30% 12%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Bright Cyan Accent System */
+    --primary: 178 100% 70%;               /* Bright Cyan #64FFDA */
+    --primary-foreground: 210 40% 6%;      /* Deep Navy for contrast */
+    --primary-glow: 178 100% 85%;          /* Lighter cyan for effects */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Electric Blue Secondary */
+    --secondary: 200 100% 52%;             /* Electric Blue #00A8FF */
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Neutral Slate System */
+    --muted: 220 15% 30%;                  /* Slate Grey #8892B0 */
+    --muted-foreground: 220 15% 70%;       /* Light Slate #CCD6F6 */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 178 100% 70%;                /* Bright Cyan */
+    --accent-foreground: 210 40% 6%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 178 100% 70%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* SAFEBOAT Custom Design Tokens */
+    --deep-navy: 210 40% 6%;               /* #0A192F */
+    --charcoal: 220 30% 12%;               /* #1E2A3A */
+    --bright-cyan: 178 100% 70%;           /* #64FFDA */
+    --electric-blue: 200 100% 52%;         /* #00A8FF */
+    --slate-grey: 220 15% 55%;             /* #8892B0 */
+    --light-slate: 220 15% 80%;            /* #CCD6F6 */
+
+    /* Advanced Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--deep-navy)), hsl(var(--charcoal)));
+    --gradient-ocean: linear-gradient(180deg, hsl(var(--deep-navy)), hsl(210 50% 3%));
+    --gradient-tech: linear-gradient(90deg, hsl(var(--bright-cyan) / 0.1), hsl(var(--electric-blue) / 0.1));
+    --gradient-glow: radial-gradient(circle at center, hsl(var(--bright-cyan) / 0.3), transparent 70%);
+
+    /* Sophisticated Shadows */
+    --shadow-premium: 0 25px 50px -12px hsl(var(--deep-navy) / 0.8);
+    --shadow-glow: 0 0 40px hsl(var(--bright-cyan) / 0.3);
+    --shadow-tech: 0 10px 30px -5px hsl(var(--electric-blue) / 0.2);
+
+    /* Animation Curves */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +128,89 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter antialiased;
+  }
+
+  /* SAFEBOAT Typography System */
+  .heading {
+    @apply font-bold uppercase tracking-wider;
+  }
+
+  .body-text {
+    @apply text-lg leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Premium Button Variants */
+  .btn-hero {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-4 rounded-xl font-bold text-lg tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-[var(--shadow-glow)] animate-pulse;
+  }
+
+  .btn-ghost {
+    @apply border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300;
+  }
+
+  /* Tech Glow Effects */
+  .tech-glow {
+    @apply relative before:absolute before:inset-0 before:bg-[var(--gradient-glow)] before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500 before:rounded-lg;
+  }
+
+  .pulse-glow {
+    @apply animate-[pulse_2s_cubic-bezier(0.4,0,0.6,1)_infinite] shadow-[var(--shadow-glow)];
+  }
+
+  /* Ocean Animation */
+  .ocean-wave {
+    @apply bg-[var(--gradient-ocean)] animate-[wave_6s_ease-in-out_infinite];
+  }
+
+  /* Premium Card Styling */
+  .premium-card {
+    @apply bg-card border border-border/50 rounded-2xl p-8 shadow-[var(--shadow-premium)] backdrop-blur-sm;
+  }
+
+  /* Interactive Elements */
+  .story-link {
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+}
+
+@layer utilities {
+  /* Custom Animations */
+  @keyframes wave {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--bright-cyan) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--bright-cyan) / 0.6); }
+  }
+
+  @keyframes tech-scan {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+
+  .animate-tech-scan {
+    animation: tech-scan 2s linear infinite;
   }
 }
