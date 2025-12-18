@@ -24,7 +24,7 @@ const SafeBoatFooter = () => {
           {/* Brand Identity */}
           <div className="space-y-6 lg:col-span-1">
             <div className="flex items-center space-x-2 group cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
-              <img src="/logo.png" alt="SAFEBOAT Logo" className="h-12 w-auto group-hover:scale-110 transition-transform duration-500" />
+              <img src="logo.png" alt="SAFEBOAT Logo" className="h-12 w-auto group-hover:scale-110 transition-transform duration-500" />
             </div>
             
             <p className="text-muted-foreground leading-relaxed">

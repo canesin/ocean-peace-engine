@@ -32,7 +32,7 @@ const SafeBoatHeader = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2" onClick={() => window.scrollTo(0, 0)} style={{ cursor: 'pointer' }}>
-            <img src="/logo.png" alt="SAFEBOAT Logo" className="h-10 w-auto" />
+            <img src="logo.png" alt="SAFEBOAT Logo" className="h-10 w-auto" />
           </div>
 
           {/* Navigation */}
