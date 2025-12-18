@@ -1,0 +1,184 @@
+{
+  "header": {
+    "solution": "La Solución",
+    "howItWorks": "Cómo Funciona",
+    "pricing": "Precios",
+    "partners": "Socios",
+    "getStarted": "Programe una instalación"
+  },
+  "hero": {
+    "title": "El océano en la",
+    "titleHighlight": "palma de tu mano",
+    "subtitle": "Inteligencia predictiva y monitoreo en tiempo real para proteger tu patrimonio y garantizar tu seguridad en el mar. Conéctate a la mayor red de apoyo náutico.",
+    "getQuote": "Programe una instalación",
+    "watchDemo": "Ver Demostración",
+    "liveStats": "vessels monitored in real time",
+    "trustedTech": "Tecnología confiable • Monitoreo 24/7 • Alertas predictivas"
+  },
+  "problems": {
+    "title": "Tu pasión no debería ser un",
+    "titleHighlight": "dolor de cabeza",
+    "subtitle": "Los propietarios de embarcaciones enfrentan desafíos únicos que pueden transformar momentos de ocio en fuentes de ansiedad.",
+    "unpredictableFailures": {
+      "title": "Fallas Impredecibles",
+      "stat": "Las fallas críticas pueden costar vidas.",
+      "description": "Problemas mecánicos inesperados en alta mar representan riesgos extremos para la tripulación y los pasajeros."
+    },
+    "highCosts": {
+      "title": "Costos Elevados",
+      "stat": "Altos costos de mantenimiento correctivo.",
+      "description": "Las reparaciones de emergencia cuestan hasta 5 veces más que el mantenimiento preventivo programado."
+    },
+    "timeLost": {
+      "title": "Tiempo Perdido",
+      "stat": "Alta tasa de indisponibilidad.",
+      "description": "Viajes cancelados y tiempo de ocio perdido debido a fallas no detectadas con anticipación."
+    },
+    "complexManagement": {
+      "title": "Gestión Complexa",
+      "stat": "El dolor real de gestionar su patrimonio.",
+      "description": "El control de múltiples sistemas, la programación de mantenimiento y el monitoreo constante generan estrés."
+    },
+    "bottomStat": "millones de embarcaciones operam sin inteligencia predictiva"
+  },
+  "solution": {
+    "title": "Inteligencia que",
+    "titleHighlight": "Protege tu Patrimonio",
+    "subtitle": "Nuestra plataforma combina hardware industrial y software inteligente para un control total de tu embarcación.",
+    "step1": {
+      "title": "Monitoreo Vital",
+      "description": "Sensores de inundación, incendio y estado de batería monitoreando tu embarcación las 24 horas del día."
+    },
+    "step2": {
+      "title": "Ancla Virtual",
+      "description": "Rastreo preciso con alertas instantáneas si tu embarcación sale del radio definido o tu ancla se mueve."
+    },
+    "step3": {
+      "title": "Red de Apoyo",
+      "description": "Conéctate a la Navalcare Community, una red de apoyo en tiempo real para visualizar y chatear con otros usuarios."
+    },
+    "appTitle": "Gestión Completa en la",
+    "appTitleHighlight": "Palma de tu Mano",
+    "batteryMonitoring": {
+      "title": "Baterías en Tiempo Real",
+      "description": "A través de nuestro hardware Safeboat, monitoreamos el voltaje y el estado de carga de las baterías 24/7."
+    },
+    "bilgePump": {
+      "title": "Pronóstico de Tiempo y Marea",
+      "description": "Información confiable sobre los mejores días y destinos para navegar con seguridad y comodidad."
+    },
+    "fuelManagement": {
+      "title": "Historial de Mantenimiento",
+      "description": "Control total de revisiones y servicios realizados, garantizando transparencia y valor para el futuro comprador."
+    },
+    "hardwareTitle": "Hardware de",
+    "hardwareTitleHighlight": "Grado Industrial",
+    "hardwareSubtitle": "Diseñado para el Ambiente Marino",
+    "hardware": {
+      "feature1": "Gabinete sellado IP67 - Protección total contra agua y polvo",
+      "feature2": "Sensores de inundación e incendio integrados",
+      "feature3": "Conectividad 4G/WiFi para datos en la nube",
+      "feature4": "Interfaz simplificada para documentación y alertas de vencimiento"
+    }
+  },
+  "pricing": {
+    "title": "Una Inversión en tu",
+    "titleHighlight": "Tranquilidad",
+    "subtitle": "Valor transparente para una total tranquilidad en el mar.",
+    "fullPlan": "Plan Completo",
+    "perYear": "/año",
+    "paymentInfo": "Pago único anual",
+    "benefits": {
+      "monitoring": "Monitoreo 24/7",
+      "alerts": "Alertas Predictivas",
+      "costs": "Reducción de Costos",
+      "time": "Más Tiempo en el Agua"
+    },
+    "getQuote": "Programe una instalación",
+    "bookDemo": "Programar Demostración",
+    "fleetMessage": "¡Hola! Me gustaría saber más sobre las Soluciones para Flotas de SAFEBOAT.",
+    "faq": {
+      "title": "Preguntas",
+      "titleHighlight": "Frequentes",
+      "q1": "¿Cómo se realiza la instalación?",
+      "a1": "Nuestro equipo técnico especializado realiza la instalación en tu embarcación, generalmente en 2-4 horas. El proceso no es invasivo y no afecta la garantía de la embarcação.",
+      "q2": "¿Es mi embarcación compatible?",
+      "a2": "SAFEBOAT é compatible con la mayoría de las embarcaciones con sistema eléctrico de 12V o 24V. Nuestro equipo realiza una evaluación previa para garantizar la total compatibilidad.",
+      "q3": "¿Qué pasa si vendo mi embarcación?",
+      "a3": "El hardware se puede transferir a una nueva embarcación o puedes cancelar el servicio. El dispositivo permanece en comodato durante todo el período de uso.",
+      "q4": "¿Cómo se protegen mis datos de navegación?",
+      "a4": "Utilizamos encriptación de extremo a extremo y servidores seguros en la nube. Tus datos son privados y nunca se comparten con terceros.",
+      "q5": "¿Cuál es la garantía del hardware?",
+      "a5": "El hardware tiene una vida útil estimada de 10 años y está en régimen de comodato. Cualquier defecto o problema está cubierto íntegramente por el servicio."
+    },
+    "cta": {
+      "title": "¿Listo para navegar con",
+      "titleHighlight": "total seguridad?",
+      "formName": "Nombre Completo",
+      "formEmail": "Correo electrónico",
+      "formPhone": "Su WhatsApp",
+      "formBoatSize": "Tamaño del Barco",
+      "formRelation": "Usted es...",
+      "formSubmit": "Quiero entrar en la lista de espera",
+      "boatSizes": {
+        "s20": "20 pies o menos",
+        "s21": "21 a 30 pies",
+        "s31": "31 a 40 pies",
+        "s41": "41 a 50 pies",
+        "s51": "51 a 60 pies",
+        "s61": "61 a 80 pies",
+        "s80": "Más de 80 pies"
+      },
+      "relations": {
+        "owner": "Propietario de embarcación",
+        "crew": "Marinero / Tripulación",
+        "company": "Empresa de alquiler náutico",
+        "marina": "Marina / Astillero",
+        "insurer": "Aseguradora",
+        "enthusiast": "Entusiasta"
+      }
+    }
+  },
+  "trust": {
+    "title": "Elogiada por",
+    "titleHighlight": "Usuarios Reales",
+    "subtitle": "Los propietarios de embarcaciones de gama media y alta confían en SAFEBOAT para proteger sus inversiones.",
+    "testimonial1": "SAFEBOAT me dio la tranquilidad que necesitaba. Detectó un problema en la bomba de combustible antes de que me diera cuenta.",
+    "testimonial2": "Desde que instalé el sistema, nunca más tuve sorpresas desagradáveis. Vale cada centavo invertido.",
+    "testimonial3": "La tecnología es impresionante. Recibo alertas incluso antes de que ocurran los problemas.",
+    "b2bTitle": "Mantenimiento Inteligente para",
+    "b2bTitleHighlight": "Empresas y Flotas",
+    "b2bDescription": "Tecnología avanzada para empresas de alquiler, charter, astilleros, aseguradoras y marinas, reduciendo drásticamente los costos y riesgos operativos.",
+    "b2bFeature1": "Visualización amplia de activaciones de bomba de achique",
+    "b2bFeature2": "Anticipación de fallas graves de batería",
+    "b2bFeature3": "Gestión centralizada de mantenimientos preventivos",
+    "b2bStats": "Embarcaciones Monitoradas",
+    "b2bQuote": "Si una tecnología es lo suficientemente confiable para gestionar 200 embarcaciones comerciales, imagina lo que puede hacer por la suya.",
+    "fleetSolutions": "Conoce nuestras Soluciones para Flotas",
+    "expertiseTitle": "Desenvolvido por",
+    "expertiseTitleHighlight": "Expertos",
+    "naval": "Ingenieros Navales",
+    "navalDesc": "Especialistas en sistemas marítimos y seguridad náutica",
+    "electrical": "Ingenieros Electricistas",
+    "electricalDesc": "Experticia en sistemas eléctricos y automatización embebida",
+    "electronic": "Ingenieros Electrónicos",
+    "electronicDesc": "Desarrollo de hardware y sistemas de comunicación"
+  },
+  "footer": {
+    "description": "Inteligencia que protege tu patrimonio. Conectando embarcaciones e propietarios a través de tecnología predictiva para un nuevo estándar de seguridad en el mar.",
+    "navigation": {
+      "title": "Navegación",
+      "solution": "La Solución",
+      "howItWorks": "Cómo Funciona",
+      "pricing": "Precios",
+      "partners": "Socios",
+      "fleetSolutions": "Soluciones para Flotas"
+    },
+    "legal": "Legal y Corporativo",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "contact": "Contacto",
+    "copyright": "2024 SAFEBOAT. Todos los derechos reservados.",
+    "monitoring": "Monitoreando embarcaciones 24/7"
+  }
+}

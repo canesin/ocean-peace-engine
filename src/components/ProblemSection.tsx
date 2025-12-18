@@ -53,19 +53,23 @@ const ProblemSection = () => {
             return (
               <div 
                 key={index}
-                className="premium-card group hover:border-primary/50 transition-all duration-500 hover:scale-105 tech-glow"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="premium-card group hover:border-primary transition-all duration-700 hover:-translate-y-4 relative overflow-hidden"
+                style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                    <IconComponent className="w-8 h-8 text-primary" />
+                <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full -mr-12 -mt-12 group-hover:bg-primary/10 transition-all duration-700" />
+                
+                <div className="text-center relative z-10">
+                  <div className="w-20 h-20 mx-auto mb-8 bg-primary/5 rounded-2xl flex items-center justify-center group-hover:bg-primary/20 transition-all duration-500 border border-primary/10 group-hover:rotate-6">
+                    <IconComponent className="w-10 h-10 text-primary" />
                   </div>
                   
-                  <h3 className="text-xl font-bold mb-4 text-foreground">
+                  <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
                     {t(problem.titleKey)}
                   </h3>
                   
-                  <p className="text-primary font-semibold mb-4 text-lg">
+                  <div className="h-1 w-12 bg-primary/30 mx-auto mb-6 group-hover:w-24 transition-all duration-500" />
+                  
+                  <p className="text-primary font-black mb-4 text-xl tracking-tighter">
                     {t(problem.statKey)}
                   </p>
                   

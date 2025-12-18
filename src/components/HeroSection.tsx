@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useI18n } from '@/hooks/useI18n';
 import heroYacht from '@/assets/hero-yacht.jpg';
@@ -7,6 +8,10 @@ import heroVideo from '@/assets/yacht-cruising.webm';
 const HeroSection = () => {
   const { t } = useI18n();
   const [videoLoaded, setVideoLoaded] = useState(false);
+
+  const scrollToForm = () => {
+    document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -36,7 +41,7 @@ const HeroSection = () => {
           <span className="block mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             {t('hero.title')}
           </span>
-          <span className="block text-foreground">
+          <span className="block text-foreground uppercase tracking-tighter">
             {t('hero.titleHighlight')}
           </span>
         </h1>
@@ -48,13 +53,15 @@ const HeroSection = () => {
         <div className="animate-fade-in animation-delay-600">
           <Button 
             size="lg" 
-            className="btn-hero text-xl px-12 py-6 mb-8"
+            className="btn-hero text-xl px-12 py-6 mb-8 group"
+            onClick={scrollToForm}
           >
             {t('hero.getQuote')}
+            <Zap className="ml-2 w-5 h-5 group-hover:scale-125 transition-transform" />
           </Button>
           
           <p className="text-sm text-muted-foreground">
-            Tecnologia confiável • Monitoramento 24/7 • Alertas preditivos
+            {t('hero.trustedTech')}
           </p>
         </div>
       </div>

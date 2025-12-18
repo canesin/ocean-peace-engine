@@ -12,21 +12,18 @@ const SolutionSection = () => {
   const steps = [
     {
       icon: Shield,
-      title: "Instalação Robusta",
-      description: "Um hardware robusto é instalado em pontos chave da sua embarcação, monitorando os sistemas vitais 24/7.",
-      highlight: "bateria"
+      title: t('solution.step1.title'),
+      description: t('solution.step1.description'),
     },
     {
       icon: Smartphone,
-      title: "Conexão Inteligente",
-      description: "O dispositivo se conecta a uma plataforma SaaS com inteligência embarcada, enviando dados em tempo real para a nuvem.",
-      highlight: "bomba"
+      title: t('solution.step2.title'),
+      description: t('solution.step2.description'),
     },
     {
       icon: Zap,
-      title: "Alertas Preditivos",
-      description: "Receba alertas que preveem falhas antes que se tornem desastres, permitindo uma manutenção proativa e inteligente.",
-      highlight: "combustivel"
+      title: t('solution.step3.title'),
+      description: t('solution.step3.description'),
     }
   ];
 
@@ -39,8 +36,8 @@ const SolutionSection = () => {
       const totalHeight = rect.height;
       const progress = Math.max(0, Math.min(1, scrolled / (totalHeight * 0.8)));
       
-      const newStep = Math.floor(progress * steps.length);
-      setActiveStep(Math.min(newStep, steps.length - 1));
+      const newStep = Math.floor(progress * (steps.length + 1));
+      setActiveStep(Math.min(newStep, steps.length));
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -74,20 +71,20 @@ const SolutionSection = () => {
               <div 
                 key={index}
                 className={`premium-card text-center transition-all duration-700 ${
-                  isActive ? 'border-primary/50 shadow-[var(--shadow-glow)]' : 'opacity-50'
+                  isActive ? 'border-primary shadow-[var(--shadow-glow)] scale-105 z-10' : 'opacity-40 grayscale blur-[1px]'
                 }`}
               >
                 <div className={`w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center transition-all duration-500 ${
-                  isActive ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'
+                  isActive ? 'bg-primary text-primary-foreground pulse-glow' : 'bg-muted text-muted-foreground'
                 }`}>
                   <IconComponent className="w-10 h-10" />
                 </div>
                 
                 <div className="flex items-center justify-center mb-4">
-                  <span className={`text-sm font-bold px-3 py-1 rounded-full ${
+                  <span className={`text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest ${
                     isActive ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground'
                   }`}>
-                    PASSO {index + 1}
+                    {t('header.howItWorks')} {index + 1}
                   </span>
                 </div>
                 
@@ -107,53 +104,43 @@ const SolutionSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-8">
             <h3 className="text-3xl md:text-4xl font-bold heading">
-              Controle Total na{' '}
-              <span className="text-primary">Palma da Sua Mão</span>
+              {t('solution.appTitle')}{' '}
+              <span className="text-primary">{t('solution.appTitleHighlight')}</span>
             </h3>
 
             <div className="space-y-6">
-              <div className={`p-6 rounded-xl border transition-all duration-500 ${
-                activeStep === 0 ? 'border-primary bg-primary/5' : 'border-border/50'
-              }`}>
-                <h4 className="text-xl font-semibold mb-2 text-foreground">
-                  Monitoramento de Bateria
-                </h4>
-                <p className="text-muted-foreground">
-                  Monitore a voltagem e o status de carregamento das baterias, evitando a principal causa de saídas frustradas.
-                </p>
-              </div>
-
-              <div className={`p-6 rounded-xl border transition-all duration-500 ${
-                activeStep === 1 ? 'border-primary bg-primary/5' : 'border-border/50'
-              }`}>
-                <h4 className="text-xl font-semibold mb-2 text-foreground">
-                  Atividade da Bomba de Porão
-                </h4>
-                <p className="text-muted-foreground">
-                  Saiba quantas vezes a bomba de porão foi acionada. Nossa plataforma alerta sobre atividade incomum que pode indicar vazamentos.
-                </p>
-              </div>
-
-              <div className={`p-6 rounded-xl border transition-all duration-500 ${
-                activeStep === 2 ? 'border-primary bg-primary/5' : 'border-border/50'
-              }`}>
-                <h4 className="text-xl font-semibold mb-2 text-foreground">
-                  Gestão de Combustível
-                </h4>
-                <p className="text-muted-foreground">
-                  Planeje suas viagens com precisão e navegue com confiança. Chega de surpresas sobre a autonomia do seu barco.
-                </p>
-              </div>
+              {[
+                { key: 'batteryMonitoring', step: 0 },
+                { key: 'bilgePump', step: 1 },
+                { key: 'fuelManagement', step: 2 }
+              ].map((item) => (
+                <div 
+                  key={item.key}
+                  className={`p-6 rounded-xl border transition-all duration-500 cursor-pointer ${
+                    activeStep === item.step ? 'border-primary bg-primary/10 shadow-lg translate-x-4' : 'border-border/50 hover:border-primary/30'
+                  }`}
+                  onClick={() => setActiveStep(item.step)}
+                >
+                  <h4 className="text-xl font-semibold mb-2 text-foreground flex items-center">
+                    {activeStep === item.step && <Zap className="w-5 h-5 text-primary mr-2 animate-pulse" />}
+                    {t(`solution.${item.key}.title`)}
+                  </h4>
+                  <p className="text-muted-foreground">
+                    {t(`solution.${item.key}.description`)}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
           <div className="relative">
-            <div className="relative">
+            <div className="relative group">
               <img 
                 src={appMockup} 
                 alt="SAFEBOAT App Interface" 
-                className="w-full max-w-md mx-auto hover-scale"
+                className="w-full max-w-md mx-auto hover-scale relative z-10"
               />
+              <div className="absolute -inset-4 bg-primary/20 rounded-full blur-3xl opacity-30 group-hover:opacity-50 transition-opacity" />
               <div className="absolute inset-0 bg-[var(--gradient-glow)] opacity-30 rounded-3xl animate-glow-pulse" />
             </div>
           </div>
@@ -162,34 +149,27 @@ const SolutionSection = () => {
         {/* Hardware Spotlight */}
         <div className="mt-24 text-center">
           <h3 className="text-3xl md:text-4xl font-bold mb-12 heading">
-            Hardware de{' '}
-            <span className="text-primary">Grau Industrial</span>
+            {t('solution.hardwareTitle')}{' '}
+            <span className="text-primary">{t('solution.hardwareTitleHighlight')}</span>
           </h3>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="premium-card">
+          <div className="max-w-5xl mx-auto">
+            <div className="premium-card relative overflow-hidden group">
+              <div className="absolute top-0 left-0 w-1 h-full bg-primary animate-tech-scan" />
               <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="text-left space-y-6">
+                <div className="text-left space-y-6 relative z-10">
                   <h4 className="text-2xl font-bold text-foreground">
-                    Projetado para o Ambiente Marinho
+                    {t('solution.hardwareSubtitle')}
                   </h4>
                   <ul className="space-y-4">
-                    <li className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                      <span className="text-muted-foreground">Gabinete selado IP67 - Proteção total contra água e poeira</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                      <span className="text-muted-foreground">Múltiplos portos de sensor para monitoramento completo</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                      <span className="text-muted-foreground">Conectividade 4G/WiFi para dados em tempo real</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <div className="w-2 h-2 bg-primary rounded-full" />
-                      <span className="text-muted-foreground">Vida útil estimada de 10 anos</span>
-                    </li>
+                    {[1, 2, 3, 4].map((i) => (
+                      <li key={i} className="flex items-start space-x-3 group">
+                        <div className="mt-1.5 w-2 h-2 bg-primary rounded-full group-hover:scale-150 transition-transform" />
+                        <span className="text-muted-foreground group-hover:text-foreground transition-colors">
+                          {t(`solution.hardware.feature${i}`)}
+                        </span>
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 
@@ -197,9 +177,9 @@ const SolutionSection = () => {
                   <img 
                     src={hardwareImage} 
                     alt="SAFEBOAT Hardware Device" 
-                    className="w-full rounded-xl hover-scale"
+                    className="w-full rounded-xl hover-scale shadow-2xl relative z-10"
                   />
-                  <div className="absolute inset-0 bg-[var(--gradient-glow)] opacity-20 rounded-xl" />
+                  <div className="absolute -inset-4 bg-primary/10 rounded-xl blur-2xl opacity-50" />
                 </div>
               </div>
             </div>

@@ -1,9 +1,12 @@
-import { Star, Users, Award } from 'lucide-react';
+import { useState } from 'react';
+import { Star, Users, Award, Smartphone } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { useI18n } from '@/hooks/useI18n';
 import teamVideo from '@/assets/team.webm';
 
 const TrustSection = () => {
   const { t } = useI18n();
+  const [videoLoaded, setVideoLoaded] = useState(false);
   const testimonials = [
     {
       quote: t('trust.testimonial1'),
@@ -25,7 +28,8 @@ const TrustSection = () => {
   return (
     <section id="parceiros" className="py-24 bg-background relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-[var(--gradient-tech)] opacity-10" />
+      <div className="absolute inset-0 bg-[var(--gradient-tech)] opacity-5" />
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
       
       <div className="container mx-auto px-6 relative z-10">
         {/* Testimonials */}
@@ -43,27 +47,29 @@ const TrustSection = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="premium-card group hover:border-primary/50 transition-all duration-500"
+              className="premium-card group hover:border-primary transition-all duration-500 hover:-translate-y-2"
             >
-              <div className="flex items-center mb-4">
+              <div className="flex items-center mb-4 space-x-1">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-primary fill-current" />
+                  <Star key={i} className="w-4 h-4 text-primary fill-current animate-pulse" style={{ animationDelay: `${i * 200}ms` }} />
                 ))}
               </div>
               
-              <blockquote className="text-muted-foreground mb-6 leading-relaxed italic">
-                "{testimonial.quote}"
+              <blockquote className="text-muted-foreground mb-8 leading-relaxed italic relative">
+                <span className="absolute -top-4 -left-2 text-4xl text-primary/20 font-serif">"</span>
+                {testimonial.quote}
+                <span className="absolute -bottom-4 -right-2 text-4xl text-primary/20 font-serif">"</span>
               </blockquote>
               
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+              <div className="flex items-center space-x-4 border-t border-border/50 pt-6">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full flex items-center justify-center border border-primary/30 group-hover:scale-110 transition-transform">
                   <span className="text-primary font-bold">
                     {testimonial.name.split(' ').map(n => n[0]).join('')}
                   </span>
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.boat}</p>
+                  <p className="font-semibold text-foreground group-hover:text-primary transition-colors">{testimonial.name}</p>
+                  <p className="text-xs uppercase tracking-widest text-muted-foreground">{testimonial.boat}</p>
                 </div>
               </div>
             </div>
@@ -71,54 +77,60 @@ const TrustSection = () => {
         </div>
 
         {/* B2B Case Study */}
-        <div className="premium-card bg-gradient-to-r from-card to-muted/5 border-primary/20">
-          <div className="text-center mb-8">
+        <div className="premium-card bg-gradient-to-br from-card via-card to-primary/5 border-primary/20 relative overflow-hidden">
+          <div className="absolute top-0 right-0 p-4">
+            <div className="bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded border border-primary/20 uppercase tracking-tighter">
+              Enterprise Case
+            </div>
+          </div>
+          
+          <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl font-bold mb-4 heading">
               {t('trust.b2bTitle')}{' '}
               <span className="text-primary">{t('trust.b2bTitleHighlight')}</span>
             </h3>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="flex items-center space-x-6 mb-8">
-                <div className="w-20 h-20 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <Users className="w-10 h-10 text-primary" />
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-8">
+              <div className="flex items-center space-x-6">
+                <div className="w-24 h-24 bg-primary/10 rounded-2xl flex items-center justify-center border border-primary/20 shadow-lg group">
+                  <Users className="w-12 h-12 text-primary group-hover:scale-110 transition-transform" />
                 </div>
-                <div className="w-20 h-20 bg-secondary/10 rounded-xl flex items-center justify-center">
-                  <span className="text-secondary font-bold text-lg">PS</span>
+                <div className="text-primary font-black text-4xl tracking-tighter">
+                  PRIME<span className="text-foreground/50">SHARE</span>
                 </div>
               </div>
 
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                A <strong className="text-foreground">Prime Share</strong>, {t('trust.b2bDescription')}
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                {t('trust.b2bDescription')}
               </p>
 
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Award className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">{t('trust.b2bFeature1')}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Award className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">{t('trust.b2bFeature2')}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Award className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">{t('trust.b2bFeature3')}</span>
-                </div>
+              <div className="grid sm:grid-cols-1 gap-4">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="flex items-center space-x-4 group p-3 rounded-lg hover:bg-primary/5 transition-colors">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center border border-primary/20">
+                      <Award className="w-4 h-4 text-primary" />
+                    </div>
+                    <span className="text-muted-foreground group-hover:text-foreground transition-colors font-medium">
+                      {t(`trust.b2bFeature${i}`)}
+                    </span>
+                  </div>
+                ))}
               </div>
             </div>
 
-            <div className="text-center lg:text-right">
-              <div className="inline-flex flex-col items-center space-y-6">
-                <div className="text-6xl font-bold text-primary">200+</div>
-                <p className="text-xl text-muted-foreground">{t('trust.b2bStats')}</p>
+            <div className="relative">
+              <div className="premium-card bg-background/40 backdrop-blur-md border-primary/30 p-12 text-center group hover:border-primary transition-all duration-700">
+                <div className="absolute -top-12 -right-12 w-48 h-48 bg-primary/10 rounded-full blur-3xl" />
                 
-                <div className="w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
-                
-                <div className="space-y-4">
-                  <p className="text-sm text-muted-foreground">
+                <div className="relative z-10 space-y-4">
+                  <div className="text-7xl font-black text-primary tracking-tighter animate-float">200+</div>
+                  <p className="text-xl uppercase tracking-widest font-bold text-muted-foreground">{t('trust.b2bStats')}</p>
+                  
+                  <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto my-8" />
+                  
+                  <p className="text-sm text-muted-foreground leading-relaxed italic max-w-xs mx-auto">
                     "{t('trust.b2bQuote')}"
                   </p>
                 </div>
@@ -127,54 +139,57 @@ const TrustSection = () => {
           </div>
 
           <div className="text-center mt-12">
-            <button className="btn-ghost">
+            <Button variant="outline" className="btn-ghost group">
               {t('trust.fleetSolutions')}
-            </button>
+              <Smartphone className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         </div>
 
         {/* Expertise */}
-        <div className="mt-20 text-center relative rounded-2xl overflow-hidden">
+        <div className="mt-20 text-center relative rounded-3xl overflow-hidden min-h-[500px] flex items-center justify-center">
           <video
-            className="absolute top-0 left-0 w-full h-full object-cover z-0"
+            className={`absolute top-0 left-0 w-full h-full object-cover z-0 transition-opacity duration-1000 ${videoLoaded ? 'opacity-40' : 'opacity-0'}`}
             autoPlay
             loop
             muted
             playsInline
+            onCanPlay={() => setVideoLoaded(true)}
           >
             <source src={teamVideo} type="video/webm" />
           </video>
-          <div className="absolute inset-0 bg-background opacity-80 z-10"></div>
-          <div className="relative z-20 p-12">
-            <h3 className="text-3xl md:text-4xl font-bold mb-12 heading">
+          {!videoLoaded && (
+            <div className="absolute inset-0 bg-card/40 animate-pulse z-0" />
+          )}
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/20 z-10"></div>
+          
+          <div className="relative z-20 p-8 md:p-16 w-full">
+            <h3 className="text-3xl md:text-5xl font-bold mb-16 heading">
               {t('trust.expertiseTitle')}{' '}
               <span className="text-primary">{t('trust.expertiseTitleHighlight')}</span>
             </h3>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="premium-card text-center group hover:border-primary/50 transition-all duration-500 bg-card/20 backdrop-blur-sm">
-                <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                  <span className="text-primary font-bold text-xl">EN</span>
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {[
+                { key: 'naval', icon: '⚓', colorClass: 'bg-primary/10 border-primary/20 hover:bg-primary/20' },
+                { key: 'electrical', icon: '⚡', colorClass: 'bg-secondary/10 border-secondary/20 hover:bg-secondary/20' },
+                { key: 'electronic', icon: '📟', colorClass: 'bg-primary/10 border-primary/20 hover:bg-primary/20' }
+              ].map((item) => (
+                <div 
+                  key={item.key}
+                  className="premium-card text-center group hover:border-primary/50 transition-all duration-500 bg-background/40 backdrop-blur-md border-border/30 hover:shadow-2xl hover:-translate-y-2"
+                >
+                  <div className={`w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 border group-hover:rotate-12 ${item.colorClass}`}>
+                    <span className="text-3xl">{item.icon}</span>
+                  </div>
+                  <h4 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors">
+                    {t(`trust.${item.key}`)}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {t(`trust.${item.key}Desc`)}
+                  </p>
                 </div>
-                <h4 className="text-xl font-bold mb-2 text-foreground">{t('trust.naval')}</h4>
-                <p className="text-muted-foreground">{t('trust.navalDesc')}</p>
-              </div>
-
-              <div className="premium-card text-center group hover:border-primary/50 transition-all duration-500 bg-card/20 backdrop-blur-sm">
-                <div className="w-16 h-16 mx-auto mb-6 bg-secondary/10 rounded-full flex items-center justify-center group-hover:bg-secondary/20 transition-colors duration-300">
-                  <span className="text-secondary font-bold text-xl">EE</span>
-                </div>
-                <h4 className="text-xl font-bold mb-2 text-foreground">{t('trust.electrical')}</h4>
-                <p className="text-muted-foreground">{t('trust.electricalDesc')}</p>
-              </div>
-
-              <div className="premium-card text-center group hover:border-primary/50 transition-all duration-500 bg-card/20 backdrop-blur-sm">
-                <div className="w-16 h-16 mx-auto mb-6 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                  <span className="text-primary font-bold text-xl">EL</span>
-                </div>
-                <h4 className="text-xl font-bold mb-2 text-foreground">{t('trust.electronic')}</h4>
-                <p className="text-muted-foreground">{t('trust.electronicDesc')}</p>
-              </div>
+              ))}
             </div>
           </div>
         </div>

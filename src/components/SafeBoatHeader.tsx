@@ -7,6 +7,10 @@ const SafeBoatHeader = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { t } = useI18n();
 
+  const scrollToForm = () => {
+    document.getElementById('final-cta')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -50,10 +54,10 @@ const SafeBoatHeader = () => {
           {/* CTAs */}
           <div className="flex items-center space-x-4">
             <LanguageSwitcher />
-            <Button variant="outline" className="btn-ghost hidden lg:inline-flex">
+            <Button variant="outline" className="btn-ghost hidden lg:inline-flex" onClick={scrollToForm}>
               {t('footer.navigation.fleetSolutions')}
             </Button>
-            <Button className="btn-hero">
+            <Button className="btn-hero" onClick={scrollToForm}>
               {t('hero.getQuote')}
             </Button>
           </div>

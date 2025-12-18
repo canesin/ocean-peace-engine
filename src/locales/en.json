@@ -1,0 +1,184 @@
+{
+  "header": {
+    "solution": "The Solution",
+    "howItWorks": "How It Works",
+    "pricing": "Pricing",
+    "partners": "Partners",
+    "getStarted": "Schedule an installation"
+  },
+  "hero": {
+    "title": "The ocean in the",
+    "titleHighlight": "palm of your hand",
+    "subtitle": "Predictive intelligence and real-time monitoring to protect your asset and ensure your safety at sea. Connect to the largest nautical support network.",
+    "getQuote": "Schedule an installation",
+    "watchDemo": "Watch Demo",
+    "liveStats": "vessels monitored in real time",
+    "trustedTech": "Reliable technology • 24/7 Monitoring • Predictive alerts"
+  },
+  "problems": {
+    "title": "Your passion shouldn't be a",
+    "titleHighlight": "headache",
+    "subtitle": "Vessel owners face unique challenges that can turn leisure moments into sources of anxiety.",
+    "unpredictableFailures": {
+      "title": "Unpredictable Failures",
+      "stat": "Critical failures can cost lives.",
+      "description": "Unexpected mechanical problems at sea pose extreme risks to crew and passengers."
+    },
+    "highCosts": {
+      "title": "High Costs",
+      "stat": "High corrective maintenance costs.",
+      "description": "Emergency repairs cost up to 5x more than scheduled preventive maintenance."
+    },
+    "timeLost": {
+      "title": "Time Lost",
+      "stat": "High unavailability rate.",
+      "description": "Cancelled trips and lost leisure time due to undetected failures in advance."
+    },
+    "complexManagement": {
+      "title": "Complex Management",
+      "stat": "The real pain of managing your asset.",
+      "description": "Control of multiple systems, maintenance scheduling and constant monitoring create stress."
+    },
+    "bottomStat": "million vessels operate without predictive intelligence"
+  },
+  "solution": {
+    "title": "Intelligence that",
+    "titleHighlight": "Protects Your Asset",
+    "subtitle": "Our platform combines industrial hardware and intelligent software for total control of your vessel.",
+    "step1": {
+      "title": "Vital Monitoring",
+      "description": "Flooding, fire, and battery status sensors monitoring your vessel 24 hours a day."
+    },
+    "step2": {
+      "title": "Virtual Anchor",
+      "description": "Precise tracking with instant alerts if your vessel leaves the defined radius or your anchor moves."
+    },
+    "step3": {
+      "title": "Support Network",
+      "description": "Connect to the Navalcare Community, a real-time support network to visualize and chat with other users."
+    },
+    "appTitle": "Complete Management in the",
+    "appTitleHighlight": "Palm of Your Hand",
+    "batteryMonitoring": {
+      "title": "Real-Time Batteries",
+      "description": "Through our Safeboat hardware, we monitor battery voltage and charging status 24/7."
+    },
+    "bilgePump": {
+      "title": "Weather and Tide Forecast",
+      "description": "Reliable information on the best days and destinations to navigate safely and comfortably."
+    },
+    "fuelManagement": {
+      "title": "Maintenance History",
+      "description": "Total control of revisions and services performed, ensuring transparency and value for the future buyer."
+    },
+    "hardwareTitle": "Industrial Grade",
+    "hardwareTitleHighlight": "Hardware",
+    "hardwareSubtitle": "Designed for Marine Environment",
+    "hardware": {
+      "feature1": "IP67 sealed enclosure - Complete protection against water and dust",
+      "feature2": "Integrated flooding and fire sensors",
+      "feature3": "4G/WiFi connectivity for cloud data",
+      "feature4": "Simplified interface for documentation and expiration alerts"
+    }
+  },
+  "pricing": {
+    "title": "An Investment in your",
+    "titleHighlight": "Peace of Mind",
+    "subtitle": "Transparent value for total peace of mind at sea.",
+    "fullPlan": "Complete Plan",
+    "perYear": "/year",
+    "paymentInfo": "Single annual payment",
+    "benefits": {
+      "monitoring": "24/7 Monitoring",
+      "alerts": "Predictive Alerts",
+      "costs": "Cost Reduction",
+      "time": "More Time on the Water"
+    },
+    "getQuote": "Schedule an installation",
+    "bookDemo": "Schedule Demo",
+    "fleetMessage": "Hello! I would like to know more about SAFEBOAT's Fleet Solutions.",
+    "faq": {
+      "title": "Frequently Asked",
+      "titleHighlight": "Questions",
+      "q1": "How is the installation performed?",
+      "a1": "Our specialized technical team performs the installation on your vessel, usually in 2-4 hours. The process is non-invasive and does not affect the vessel's warranty.",
+      "q2": "Is my vessel compatible?",
+      "a2": "SAFEBOAT is compatible with most vessels with 12V or 24V electrical systems. Our team makes a prior assessment to ensure total compatibility.",
+      "q3": "What happens if I sell my vessel?",
+      "a3": "The hardware can be transferred to a new vessel or you can cancel the service. The device remains on bailment throughout the period of use.",
+      "q4": "How are my navigation data protected?",
+      "a4": "We use end-to-end encryption and secure cloud servers. Your data is private and never shared with third parties.",
+      "q5": "What is the hardware warranty?",
+      "a5": "The hardware has an estimated lifespan of 10 years and is on bailment. Any defect or problem is fully covered by the service."
+    },
+    "cta": {
+      "title": "Ready to navigate with",
+      "titleHighlight": "total safety?",
+      "formName": "Full Name",
+      "formEmail": "E-mail",
+      "formPhone": "Your WhatsApp",
+      "formBoatSize": "Boat Size",
+      "formRelation": "You are...",
+      "formSubmit": "I want to join the waiting list",
+      "boatSizes": {
+        "s20": "20 feet or less",
+        "s21": "21 to 30 feet",
+        "s31": "31 to 40 feet",
+        "s41": "41 to 50 feet",
+        "s51": "51 to 60 feet",
+        "s61": "61 to 80 feet",
+        "s80": "Above 80 feet"
+      },
+      "relations": {
+        "owner": "Boat owner",
+        "crew": "Sailor / Crew",
+        "company": "Nautical quota company",
+        "marina": "Marina / Shipyard",
+        "insurer": "Insurer",
+        "enthusiast": "Enthusiast"
+      }
+    }
+  },
+  "trust": {
+    "title": "Praised by",
+    "titleHighlight": "Real Users",
+    "subtitle": "Medium and high-end vessel owners trust SAFEBOAT to protect their investments.",
+    "testimonial1": "SAFEBOAT gave me the peace of mind I needed. It detected a fuel pump problem before I even noticed.",
+    "testimonial2": "Since I installed the system, I never had unpleasant surprises again. Worth every penny invested.",
+    "testimonial3": "The technology is impressive. I receive alerts even before problems happen.",
+    "b2bTitle": "Intelligent Maintenance for",
+    "b2bTitleHighlight": "Companies and Fleets",
+    "b2bDescription": "Advanced technology for boat sharing companies, charter, shipyards, insurers and marinas, drastically reducing operational costs and risks.",
+    "b2bFeature1": "Wide visualization of bilge pump activations",
+    "b2bFeature2": "Anticipation of serious battery failures",
+    "b2bFeature3": "Centralized management of preventive maintenance",
+    "b2bStats": "Monitored Vessels",
+    "b2bQuote": "If a technology is reliable enough to manage 200 commercial vessels, imagine what it can do for yours.",
+    "fleetSolutions": "Learn about our Fleet Solutions",
+    "expertiseTitle": "Developed by",
+    "expertiseTitleHighlight": "Experts",
+    "naval": "Naval Engineers",
+    "navalDesc": "Specialists in maritime systems and nautical safety",
+    "electrical": "Electrical Engineers",
+    "electricalDesc": "Expertise in electrical systems and embedded automation",
+    "electronic": "Electronic Engineers",
+    "electronicDesc": "Hardware development and communication systems"
+  },
+  "footer": {
+    "description": "Intelligence that protects your asset. Connecting vessels and owners through predictive technology for a new standard of safety at sea.",
+    "navigation": {
+      "title": "Navigation",
+      "solution": "The Solution",
+      "howItWorks": "How It Works",
+      "pricing": "Pricing",
+      "partners": "Partners",
+      "fleetSolutions": "Fleet Solutions"
+    },
+    "legal": "Legal & Corporate",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "contact": "Contact",
+    "copyright": "2024 SAFEBOAT. All rights reserved.",
+    "monitoring": "Monitoring vessels 24/7"
+  }
+}
