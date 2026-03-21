@@ -26,15 +26,15 @@ const TrustSection = () => {
   ];
 
   return (
-    <section id="parceiros" className="py-24 bg-background relative overflow-hidden">
+    <section id="parceiros" className="py-12 sm:py-24 bg-background relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[var(--gradient-tech)] opacity-5" />
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-      
-      <div className="container mx-auto px-6 relative z-10">
+
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Testimonials */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 heading">
+        <div className="text-center mb-12 sm:mb-20">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 heading">
             {t('trust.title')}{' '}
             <span className="text-primary">{t('trust.titleHighlight')}</span>
           </h2>
@@ -43,7 +43,7 @@ const TrustSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+        <div className="grid md:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-20">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
@@ -84,20 +84,20 @@ const TrustSection = () => {
             </div>
           </div>
           
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4 heading">
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-2xl md:text-4xl font-bold mb-4 heading">
               {t('trust.b2bTitle')}{' '}
               <span className="text-primary">{t('trust.b2bTitleHighlight')}</span>
             </h3>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div className="flex items-center space-x-6">
-                <div className="w-24 h-24 bg-primary/10 rounded-2xl flex items-center justify-center border border-primary/20 shadow-lg group">
-                  <Users className="w-12 h-12 text-primary group-hover:scale-110 transition-transform" />
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+            <div className="space-y-6 sm:space-y-8">
+              <div className="flex items-center space-x-4 sm:space-x-6">
+                <div className="w-16 h-16 sm:w-24 sm:h-24 bg-primary/10 rounded-2xl flex items-center justify-center border border-primary/20 shadow-lg group shrink-0">
+                  <Users className="w-8 h-8 sm:w-12 sm:h-12 text-primary group-hover:scale-110 transition-transform" />
                 </div>
-                <div className="text-primary font-black text-4xl tracking-tighter">
+                <div className="text-primary font-black text-2xl sm:text-4xl tracking-tighter">
                   PRIME<span className="text-foreground/50">SHARE</span>
                 </div>
               </div>
@@ -121,11 +121,11 @@ const TrustSection = () => {
             </div>
 
             <div className="relative">
-              <div className="premium-card bg-background/40 backdrop-blur-md border-primary/30 p-12 text-center group hover:border-primary transition-all duration-700">
+              <div className="premium-card bg-background/40 backdrop-blur-md border-primary/30 p-6 sm:p-12 text-center group hover:border-primary transition-all duration-700">
                 <div className="absolute -top-12 -right-12 w-48 h-48 bg-primary/10 rounded-full blur-3xl" />
                 
                 <div className="relative z-10 space-y-4">
-                  <div className="text-7xl font-black text-primary tracking-tighter animate-float">200+</div>
+                  <div className="text-5xl sm:text-7xl font-black text-primary tracking-tighter animate-float">200+</div>
                   <p className="text-xl uppercase tracking-widest font-bold text-muted-foreground">{t('trust.b2bStats')}</p>
                   
                   <div className="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto my-8" />
@@ -147,7 +147,7 @@ const TrustSection = () => {
         </div>
 
         {/* Expertise */}
-        <div className="mt-20 text-center relative rounded-3xl overflow-hidden min-h-[500px] flex items-center justify-center">
+        <div className="mt-12 sm:mt-20 text-center relative rounded-3xl overflow-hidden min-h-[400px] sm:min-h-[500px] flex items-center justify-center">
           <video
             className={`absolute top-0 left-0 w-full h-full object-cover z-0 transition-opacity duration-1000 ${videoLoaded ? 'opacity-40' : 'opacity-0'}`}
             autoPlay
@@ -163,8 +163,8 @@ const TrustSection = () => {
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-background/20 z-10"></div>
           
-          <div className="relative z-20 p-8 md:p-16 w-full">
-            <h3 className="text-3xl md:text-5xl font-bold mb-16 heading">
+          <div className="relative z-20 p-4 sm:p-8 md:p-16 w-full">
+            <h3 className="text-2xl md:text-5xl font-bold mb-8 sm:mb-16 heading">
               {t('trust.expertiseTitle')}{' '}
               <span className="text-primary">{t('trust.expertiseTitleHighlight')}</span>
             </h3>

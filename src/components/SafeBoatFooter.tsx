@@ -15,12 +15,12 @@ const SafeBoatFooter = () => {
   ];
 
   return (
-    <footer className="bg-background border-t border-border/50 py-16 relative overflow-hidden">
+    <footer className="bg-background border-t border-border/50 py-10 sm:py-16 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[var(--gradient-tech)] opacity-5" />
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-4 gap-12">
+
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
           {/* Brand Identity */}
           <div className="space-y-6 lg:col-span-1">
             <div className="flex items-center space-x-2 group cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
@@ -139,16 +139,16 @@ const SafeBoatFooter = () => {
         </div>
 
         {/* Gallery */}
-        <div className="mt-20">
-          <div className="flex items-center justify-between mb-8">
+        <div className="mt-12 sm:mt-20">
+          <div className="flex items-center justify-between mb-6 sm:mb-8">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-border/50" />
-            <h4 className="text-xs font-black text-foreground/30 uppercase tracking-[0.3em] mx-8">Behind the Scenes</h4>
+            <h4 className="text-xs font-black text-foreground/30 uppercase tracking-[0.3em] mx-4 sm:mx-8">Behind the Scenes</h4>
             <div className="h-px flex-1 bg-gradient-to-l from-transparent to-border/50" />
           </div>
-          
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6">
             {images.map((image, index) => (
-              <div key={index} className="w-full h-40 rounded-2xl overflow-hidden group relative border border-border/50">
+              <div key={index} className="w-full h-28 sm:h-40 rounded-xl sm:rounded-2xl overflow-hidden group relative border border-border/50">
                 <img src={image} alt={`Gallery image ${index + 1}`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-125" />
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 mix-blend-overlay" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />

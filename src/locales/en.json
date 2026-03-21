@@ -119,6 +119,7 @@
       "formPhone": "Your WhatsApp",
       "formBoatSize": "Boat Size",
       "formRelation": "You are...",
+      "formSelectType": "Select",
       "formSubmit": "I want to join the waiting list",
       "boatSizes": {
         "s20": "20 feet or less",
@@ -146,9 +147,9 @@
     "testimonial1": "SAFEBOAT gave me the peace of mind I needed. It detected a fuel pump problem before I even noticed.",
     "testimonial2": "Since I installed the system, I never had unpleasant surprises again. Worth every penny invested.",
     "testimonial3": "The technology is impressive. I receive alerts even before problems happen.",
-    "b2bTitle": "Intelligent Maintenance for",
-    "b2bTitleHighlight": "Companies and Fleets",
-    "b2bDescription": "Advanced technology for boat sharing companies, charter, shipyards, insurers and marinas, drastically reducing operational costs and risks.",
+    "b2bTitle": "Predictive Monitoring for",
+    "b2bTitleHighlight": "Intelligent Maintenance",
+    "b2bDescription": "SAFEBOAT delivers predictive monitoring so your operation achieves intelligent maintenance. Advanced technology for boat sharing companies, charter, shipyards, insurers and marinas — drastically reducing operational costs and risks.",
     "b2bFeature1": "Wide visualization of bilge pump activations",
     "b2bFeature2": "Anticipation of serious battery failures",
     "b2bFeature3": "Centralized management of preventive maintenance",
@@ -163,6 +164,32 @@
     "electricalDesc": "Expertise in electrical systems and embedded automation",
     "electronic": "Electronic Engineers",
     "electronicDesc": "Hardware development and communication systems"
+  },
+  "insurance": {
+    "title": "Benefits for",
+    "titleHighlight": "Insurers and Insured",
+    "subtitle": "Monitored vessels are safer vessels. Predictive monitoring creates a relationship of transparency and trust between those who sail and those who protect.",
+    "insurer": {
+      "label": "For Insurers",
+      "benefit1": "Reduced claims with early alerts for critical failures",
+      "benefit2": "Real usage and maintenance data for fairer pricing",
+      "benefit3": "Portfolio of vessels with monitored and controlled risk",
+      "benefit4": "Competitive edge by offering monitoring-linked insurance"
+    },
+    "insured": {
+      "label": "For Insured",
+      "benefit1": "Potentially lower premiums with proven track record",
+      "benefit2": "Continuous documentation that increases vessel resale value",
+      "benefit3": "Peace of mind knowing your boat is always being looked after",
+      "benefit4": "Fast emergency response with real-time data"
+    },
+    "cta": "A safe, transparent, well-maintained vessel — good for those who sail and those who protect.",
+    "stat1Value": "40%",
+    "stat1Label": "Potential claims reduction",
+    "stat2Value": "24/7",
+    "stat2Label": "Continuous monitoring",
+    "stat3Value": "100%",
+    "stat3Label": "Data transparency"
   },
   "footer": {
     "description": "Intelligence that protects your asset. Connecting vessels and owners through predictive technology for a new standard of safety at sea.",

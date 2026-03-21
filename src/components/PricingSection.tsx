@@ -9,7 +9,7 @@ import {
   AccordionItem, 
   AccordionTrigger 
 } from '@/components/ui/accordion';
-import { Check, Info, Shield, Zap, Clock, Users } from 'lucide-react';
+import { Check, Shield, Zap, Clock, Users } from 'lucide-react';
 import { useI18n } from '@/hooks/useI18n';
 
 const PricingSection = () => {
@@ -91,14 +91,14 @@ const PricingSection = () => {
   };
 
   return (
-    <section id="precos" className="py-24 bg-card relative overflow-hidden">
+    <section id="precos" className="py-12 sm:py-24 bg-card relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
-      
-      <div className="container mx-auto px-6 relative z-10">
+
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 heading">
+        <div className="text-center mb-12 sm:mb-20">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 heading">
             {t('pricing.title')}{' '}
             <span className="text-primary">{t('pricing.titleHighlight')}</span>
           </h2>
@@ -121,9 +121,9 @@ const PricingSection = () => {
                 </div>
                 
                 <div className="space-y-2">
-                  <div className="text-6xl md:text-8xl font-black text-primary tracking-tighter transition-all duration-500">
+                  <div className="text-4xl sm:text-6xl md:text-8xl font-black text-primary tracking-tighter transition-all duration-500">
                     R$ 2.500
-                    <span className="text-2xl text-muted-foreground ml-2">
+                    <span className="text-lg sm:text-2xl text-muted-foreground ml-2">
                       {t('pricing.perYear')}
                     </span>
                   </div>
@@ -157,8 +157,8 @@ const PricingSection = () => {
         </div>
 
         {/* FAQ Section */}
-        <div className="max-w-4xl mx-auto mb-20">
-          <h3 className="text-3xl md:text-4xl font-bold text-center mb-12 heading">
+        <div className="max-w-4xl mx-auto mb-12 sm:mb-20">
+          <h3 className="text-2xl md:text-4xl font-bold text-center mb-8 sm:mb-12 heading">
             {t('pricing.faq.title')}{' '}
             <span className="text-primary">{t('pricing.faq.titleHighlight')}</span>
           </h3>
@@ -185,9 +185,9 @@ const PricingSection = () => {
         <div id="final-cta" className="premium-card border-primary/30 bg-gradient-to-r from-card via-card to-primary/5 relative overflow-hidden group">
           <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all duration-1000" />
           
-          <div className="grid lg:grid-cols-2 gap-16 items-center relative z-10">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center relative z-10">
             <div>
-              <h3 className="text-3xl md:text-5xl font-bold mb-8 heading">
+              <h3 className="text-2xl md:text-5xl font-bold mb-6 sm:mb-8 heading">
                 {t('pricing.cta.title')}{' '}
                 <span className="text-primary">{t('pricing.cta.titleHighlight')}</span>
               </h3>
