@@ -25,16 +25,16 @@ const InsuranceSection = () => {
   ];
 
   return (
-    <section id="seguros" className="py-24 bg-background relative overflow-hidden">
+    <section id="seguros" className="py-12 sm:py-24 bg-background relative overflow-hidden">
       <div className="absolute inset-0 bg-[var(--gradient-tech)] opacity-10" />
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-secondary/30 to-transparent" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-secondary/10 rounded-full px-4 py-2 mb-6">
             <Shield className="w-5 h-5 text-secondary" />
-            <span className="text-secondary font-semibold text-sm uppercase tracking-widest">Insurance</span>
+            <span className="text-secondary font-semibold text-sm uppercase tracking-widest">{t('insurance.badge')}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 heading">
             {t('insurance.title')}{' '}
