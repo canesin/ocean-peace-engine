@@ -45,14 +45,14 @@ const SolutionSection = () => {
   }, [steps.length]);
 
   return (
-    <section id="solucao" ref={sectionRef} className="py-24 bg-card relative overflow-hidden">
+    <section id="solucao" ref={sectionRef} className="py-12 sm:py-24 bg-card relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
-      
-      <div className="container mx-auto px-6 relative z-10">
+
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 heading">
+        <div className="text-center mb-12 sm:mb-20">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 heading">
             {t('solution.title')}{' '}
             <span className="text-primary">{t('solution.titleHighlight')}</span>
           </h2>
@@ -101,9 +101,9 @@ const SolutionSection = () => {
         </div>
 
         {/* Interactive App Showcase */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-8">
-            <h3 className="text-3xl md:text-4xl font-bold heading">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          <div className="space-y-6 sm:space-y-8">
+            <h3 className="text-2xl md:text-4xl font-bold heading">
               {t('solution.appTitle')}{' '}
               <span className="text-primary">{t('solution.appTitleHighlight')}</span>
             </h3>
@@ -117,7 +117,7 @@ const SolutionSection = () => {
                 <div 
                   key={item.key}
                   className={`p-6 rounded-xl border transition-all duration-500 cursor-pointer ${
-                    activeStep === item.step ? 'border-primary bg-primary/10 shadow-lg translate-x-4' : 'border-border/50 hover:border-primary/30'
+                    activeStep === item.step ? 'border-primary bg-primary/10 shadow-lg sm:translate-x-4' : 'border-border/50 hover:border-primary/30'
                   }`}
                   onClick={() => setActiveStep(item.step)}
                 >
@@ -147,8 +147,8 @@ const SolutionSection = () => {
         </div>
 
         {/* Hardware Spotlight */}
-        <div className="mt-24 text-center">
-          <h3 className="text-3xl md:text-4xl font-bold mb-12 heading">
+        <div className="mt-12 sm:mt-24 text-center">
+          <h3 className="text-2xl md:text-4xl font-bold mb-8 sm:mb-12 heading">
             {t('solution.hardwareTitle')}{' '}
             <span className="text-primary">{t('solution.hardwareTitleHighlight')}</span>
           </h3>

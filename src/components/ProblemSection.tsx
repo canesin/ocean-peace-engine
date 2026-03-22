@@ -32,13 +32,13 @@ const ProblemSection = () => {
   ];
 
   return (
-    <section id="problemas" className="py-24 bg-background relative overflow-hidden">
+    <section id="problemas" className="py-12 sm:py-24 bg-background relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[var(--gradient-tech)] opacity-20" />
-      
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 heading">
+
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 heading">
             {t('problems.title')}{' '}
             <span className="text-primary">{t('problems.titleHighlight')}</span>
           </h2>

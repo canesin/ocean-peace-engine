@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useI18n } from '@/hooks/useI18n';
@@ -36,31 +36,31 @@ const HeroSection = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 animate-fade-in">
-          <span className="block mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6">
+        <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 sm:mb-8 animate-fade-in">
+          <span className="block mb-2 sm:mb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             {t('hero.title')}
           </span>
           <span className="block text-foreground uppercase tracking-tighter">
             {t('hero.titleHighlight')}
           </span>
         </h1>
-        
-        <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in animation-delay-300">
+
+        <p className="text-base sm:text-xl md:text-2xl text-muted-foreground mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed animate-fade-in animation-delay-300">
           {t('hero.subtitle')}
         </p>
 
         <div className="animate-fade-in animation-delay-600">
-          <Button 
-            size="lg" 
-            className="btn-hero text-xl px-12 py-6 mb-8 group"
+          <Button
+            size="lg"
+            className="btn-hero text-base sm:text-xl px-8 sm:px-12 py-4 sm:py-6 mb-8 group"
             onClick={scrollToForm}
           >
             {t('hero.getQuote')}
             <Zap className="ml-2 w-5 h-5 group-hover:scale-125 transition-transform" />
           </Button>
-          
-          <p className="text-sm text-muted-foreground">
+
+          <p className="text-xs sm:text-sm text-muted-foreground">
             {t('hero.trustedTech')}
           </p>
         </div>

@@ -119,6 +119,7 @@
       "formPhone": "Seu WhatsApp",
       "formBoatSize": "Tamanho do Barco",
       "formRelation": "Você é...",
+      "formSelectType": "Selecione",
       "formSubmit": "Quero entrar na lista de espera",
       "boatSizes": {
         "s20": "20 pés ou menos",
@@ -146,9 +147,9 @@
     "testimonial1": "O SAFEBOAT me deu a tranquilidade que eu precisava. Detectou um problema na bomba de combustível antes mesmo que eu percebesse.",
     "testimonial2": "Desde que instalei o sistema, nunca mais tive surpresas desagradáveis. Vale cada centavo investido.",
     "testimonial3": "A tecnologia é impressionante. Recebo alertas antes mesmo dos problemas acontecerem.",
-    "b2bTitle": "Manutenção Inteligente para",
-    "b2bTitleHighlight": "Empresas e Frotas",
-    "b2bDescription": "Tecnologia avançada para empresas de cotas náuticas, charter, estaleiros, seguradoras e marinas, reduzindo drasticamente custos e riscos operacionais.",
+    "b2bTitle": "Monitoramento Preditivo para",
+    "b2bTitleHighlight": "Manutenção Inteligente",
+    "b2bDescription": "A SAFEBOAT entrega monitoramento preditivo para que sua operação tenha manutenção inteligente. Tecnologia avançada para empresas de cotas náuticas, charter, estaleiros, seguradoras e marinas — reduzindo drasticamente custos e riscos operacionais.",
     "b2bFeature1": "Visualização ampla de ativações de bomba de porão",
     "b2bFeature2": "Antecipação de falhas graves de bateria",
     "b2bFeature3": "Gestão centralizada de manutenções preventivas",
@@ -163,6 +164,33 @@
     "electricalDesc": "Expertise em sistemas elétricos e automação embarcada",
     "electronic": "Engenheiros Eletrônicos",
     "electronicDesc": "Desenvolvimento de hardware e sistemas de comunicação"
+  },
+  "insurance": {
+    "badge": "Seguros",
+    "title": "Benefícios para",
+    "titleHighlight": "Seguradoras e Segurados",
+    "subtitle": "Embarcações monitoradas são embarcações mais seguras. O monitoramento preditivo cria uma relação de transparência e confiança entre quem navega e quem protege.",
+    "insurer": {
+      "label": "Para Seguradoras",
+      "benefit1": "Redução de sinistros com alertas antecipados de falhas críticas",
+      "benefit2": "Dados reais de uso e manutenção para precificação mais justa",
+      "benefit3": "Portfólio de embarcações com risco monitorado e controlado",
+      "benefit4": "Diferencial competitivo ao oferecer seguros vinculados a monitoramento"
+    },
+    "insured": {
+      "label": "Para Segurados",
+      "benefit1": "Possibilidade de prêmios mais acessíveis com histórico comprovado",
+      "benefit2": "Documentação contínua que valoriza a embarcação na revenda",
+      "benefit3": "Tranquilidade de saber que seu barco está sempre sendo cuidado",
+      "benefit4": "Resposta rápida em emergências com dados em tempo real"
+    },
+    "cta": "Barco seguro, transparente e bem cuidado — bom para quem navega e para quem protege.",
+    "stat1Value": "40%",
+    "stat1Label": "Redução potencial em sinistros",
+    "stat2Value": "24/7",
+    "stat2Label": "Monitoramento contínuo",
+    "stat3Value": "100%",
+    "stat3Label": "Transparência nos dados"
   },
   "footer": {
     "description": "Inteligência que protege seu patrimônio. Conectando embarcações e proprietários através de tecnologia preditiva para um novo padrão de segurança no mar.",
